@@ -112,7 +112,6 @@ function App() {
       color: textColor,
     }}
   >
-    {/* Centered Heading */}
     <div className="text-center mb-4">
       <h4 className="fw-bold mb-0">Your Feedback is Appreciated</h4>
     </div>
@@ -126,7 +125,7 @@ function App() {
                 className="rounded-3"
                 style={{
                   backgroundColor: darkMode ? '#2c2c2c' : '',
-                  color: textColor,
+                  color: darkMode ? '#f0f0f0' : '#000',
                   border: 'none',
                 }}
               />
@@ -144,7 +143,7 @@ function App() {
                 className="rounded-3"
                 style={{
                   backgroundColor: darkMode ? '#2c2c2c' : '',
-                  color: textColor,
+                  color: darkMode ? '#f0f0f0' : '#000',
                   border: 'none',
                 }}
               />
