@@ -70,7 +70,18 @@ function App() {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-start py-5" style={{ minHeight: '100vh', backgroundColor: '#f7f8fa' }}>
+    <Container
+  fluid
+  className="d-flex justify-content-center align-items-center"
+  style={{
+    minHeight: '100vh',
+    width: '100vw',
+    backgroundColor: '#f7f8fa',
+    padding: '2rem',
+    boxSizing: 'border-box',
+  }}
+>
+    
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       <Card className="p-4 shadow-sm border-0 rounded-4" style={{ maxWidth: '500px', width: '100%' }}>
         <h4 className="text-center fw-bold mb-4">📝 Anonymous Feedback</h4>
