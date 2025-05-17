@@ -88,32 +88,34 @@ function App() {
   return (
     <div style={{ minHeight: '100vh', width: '100vw', backgroundColor: bg }}>
       <Container
-        fluid
-        className="d-flex justify-content-center align-items-center"
-        style={{ minHeight: '100vh', padding: '2rem' }}
-      >
-        <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
+  fluid
+  className="d-flex justify-content-center align-items-center flex-column"
+  style={{ minHeight: '100vh', padding: '2rem' }}
+>
+  <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
 
-        <Card
-          className="p-4 shadow-sm border-0 rounded-4 w-100"
-          style={{
-            maxWidth: '500px',
-            backgroundColor: cardBg,
-            color: textColor,
-          }}
-        >
-          <div className="d-flex justify-content-between align-items-center mb-3">
-            <h4 className="fw-bold mb-0">Your Feedback is Appreciated</h4>
-            <Form.Check
-              type="switch"
-              id="dark-mode-switch"
-              label="🌙"
-              checked={darkMode}
-              onChange={() => setDarkMode((prev) => !prev)}
-              className="ms-2"
-            />
-          </div>
+  <div className="mb-3 d-flex justify-content-end w-100" style={{ maxWidth: '500px' }}>
+    <Form.Check
+      type="switch"
+      id="dark-mode-switch"
+      label="Dark"
+      checked={darkMode}
+      onChange={() => setDarkMode((prev) => !prev)}
+    />
+  </div>
 
+  <Card
+    className="p-4 shadow-sm border-0 rounded-4 w-100"
+    style={{
+      maxWidth: '500px',
+      backgroundColor: cardBg,
+      color: textColor,
+    }}
+  >
+    {/* Centered Heading */}
+    <div className="text-center mb-4">
+      <h4 className="fw-bold mb-0">Your Feedback is Appreciated</h4>
+    </div>
           <Form onSubmit={handleSubmit} className="mb-4">
             <Form.Group className="mb-3">
               <Form.Control
